@@ -16,6 +16,7 @@ const pathProcessed = path.join(__dirname, "grayscaled");
 
 IOhandler
     .zip(zipFilePath, pathUnzipped)
+    .then(() => console.log("Extraction Completed"))
     .then(async () => {
         return await IOhandler.readsDir(pathUnzipped);})
     .then((imgs) => {
